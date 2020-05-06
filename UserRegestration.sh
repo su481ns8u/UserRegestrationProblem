@@ -1,10 +1,19 @@
 #!/bin/bash -x
-read name
-namePattern="^[[:upper:]]{1}[[:lower:]]{3,}"
+read -p "Enter first name: " fname
+fNamePattern="^[[:upper:]]{1}[[:lower:]]{3,}"
 
-if [[ $name =~ $namePattern ]]
+if [[ $fname =~ $fNamePattern ]]
 then
-	echo "Name Validated"
+	echo "First Name Validated"
 else
-	echo "Name not Valid"
+	echo "First Name not Valid"
+fi
+
+read -p "Enter Last name: " lname
+lNamePattern="^[[:upper:]]{1}[[:lower:]]{3,}"
+if [[ $lname =~ $lNamePattern ]]
+then
+	echo "Last name Validated"
+else
+	echo "Last Name Not Valid"
 fi
