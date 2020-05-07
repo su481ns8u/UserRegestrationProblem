@@ -36,3 +36,11 @@ else
         echo "Invalid mobile number"
 fi
 
+read -p "Enter password: " passRule1
+assPattern1="[[:alnum:]]{8,}$"
+if [[ $passRule1 =~ $passPattern1 ]]
+then
+        echo "Password Validated"
+else
+        echo "Invalid Password"
+fi
