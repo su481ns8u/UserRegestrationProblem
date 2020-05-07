@@ -28,7 +28,7 @@ else
 fi
 
 read -p "Enter mobile number with country code: " mobno
-mobilePattern="^[1-9]+[0-9]+[\ ]+[1-9]+[0-9]{9}$"
+mobilePattern="^[1-9]+[0-9]+[\ ]+[1-9]{1}[0-9]{9}$"
 if [[ $mobno =~ $mobilePattern ]]
 then
 	echo "Mobile number validated"
@@ -36,9 +36,9 @@ else
         echo "Invalid mobile number"
 fi
 
-read -p "Enter password: " passRule2
-passPattern2="(?=[^A-Z]*[A-Z])[[:alnum:]]{8,}$"
-if [[ $passRule2 =~ $passPattern2 ]]
+read -p "Enter password: " passRule3
+passPattern3="^((?=.*([0-9])(?=.*[A-Z])[[:alnum:]]{8,}$"
+if [[ $passRule3 =~ $passPattern3 ]]
 then
         echo "Password Validated"
 else
