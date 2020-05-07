@@ -36,9 +36,9 @@ else
         echo "Invalid mobile number"
 fi
 
-read -p "Enter password: " passRule3
-passPattern3="^((?=.*([0-9])(?=.*[A-Z])[[:alnum:]]{8,}$"
-if [[ $passRule3 =~ $passPattern3 ]]
+read -p "Enter password: " passRule4
+passPattern4="^((?=.*([[:digit:]])(?=.*[[:upper:]])(?=.*[[:punct:]]{1})[[:alnum:]]{8,}$"
+if [[ $passRule4 =~ $passPattern4 ]]
 then
         echo "Password Validated"
 else
