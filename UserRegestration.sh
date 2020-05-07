@@ -26,3 +26,13 @@ then
 else
         echo "Invalid Email"
 fi
+
+read -p "Enter mobile number with country code: " mobno
+mobilePattern="^[1-9]+[0-9]+[\ ]+[1-9]+[0-9]{9}$"
+if [[ $mobno =~ $mobilePattern ]]
+then
+	echo "Mobile number validated"
+else
+        echo "Invalid mobile number"
+fi
+
